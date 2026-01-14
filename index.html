@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PANWLE HOŞGELDİNİZ</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0f0c29; /* Gradient arka plan */
+      background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+    }
 
+    .welcome-text {
+      font-size: 3.5rem;
+      font-weight: bold;
+      text-align: center;
+      color: transparent;
+      background: linear-gradient(90deg, #ff7e5f, #feb47b, #ff7e5f);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: 
+        gradientShift 4s ease infinite,
+        fadeInUp 1.5s ease-out forwards,
+        subtleShake 3s ease-in-out infinite;
+      opacity: 0;
+      letter-spacing: 3px;
+      text-shadow: 0 0 10px rgba(255, 126, 95, 0.3);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes subtleShake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-3px); }
+      75% { transform: translateX(3px); }
+    }
+
+    @media (max-width: 768px) {
+      .welcome-text {
+        font-size: 2rem;
+        letter-spacing: 1.5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="welcome-text">PANWLE HOŞGELDİNİZ BY LUKARİX</div>
+</body>
+</html>
